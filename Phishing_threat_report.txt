@@ -1,0 +1,66 @@
+------------------------------------------------------------
+FORENSIC EMAIL REPORT — PHISHING ATTEMPT ANALYSIS
+Target: Hobatere Lodge Namibia (Spoofed)
+Analyst: Mohammed Aleem Hasan
+Date: 23-Sep-2025
+------------------------------------------------------------
+
+[1] EMAIL METADATA
+------------------
+Subject: Please confirm your account
+Sender: hobatere.asylum.com.ua
+Language: Russian + English (mixed bait)
+Timestamp: 28-Aug-2023 21:44:19
+Spam Flag: TRUE (Gmail auto-flagged)
+Link Embedded: http://mcm1.com.ph/index.php?id=29115
+
+[2] HEADER AUTHENTICATION STATUS
+--------------------------------
+SPF: PASS
+→ Sent via Amazon SES (authorized relay)
+
+DKIM: FAIL
+→ Signature invalid or missing
+
+DMARC: NON-COMPLIANT
+→ DKIM failed → no alignment → policy not enforced
+
+[3] SMTP RELAY TRACE
+--------------------
+Hop 1: hubble-noreply@google.com → mx.google.com → 0s
+Hop 2: mx.google.com → us-east-2.amazonses.com → 0s
+Hop 3: us-east-2.amazonses.com → smtp.gmail.com → 1s
+
+Relay Pattern: Cloud-based → rapid → automated
+Suspicion: Amazon SES used for spoofing
+
+[4] PHISHING RED FLAGS
+----------------------
+✓ Domain mismatch (asylum.com.ua ≠ hobatere.com.na)
+✓ Mixed-language bait (Russian salary + English lodge)
+✓ Link points to unrelated `.com.ph` domain
+✓ DKIM failure = possible header tampering
+✓ DMARC failure = sender not authorized
+✓ SPF passed but misleading (relay abuse)
+✓ Gmail flagged domain due to prior spam
+
+[5] FINAL VERDICT
+-----------------
+This email is a confirmed phishing attempt.
+It uses brand impersonation, spoofed headers, and deceptive content.
+Authentication failures validate unauthorized origin.
+The embedded link is likely malicious and unrelated to the claimed sender.
+
+[6] RECOMMENDED ACTIONS
+------------------------
+→ Block domain: asylum.com.ua
+→ Report to: https://www.phishtank.com/
+→ Educate users on mixed-language phishing tactics
+→ Monitor Amazon SES relays for abuse
+→ Add to internal phishing tracker sheet
+
+------------------------------------------------------------
+END OF REPORT
+Prepared by: Mohammed Aleem Hasan
+
+------------------------------------------------------------

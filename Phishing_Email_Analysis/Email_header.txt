@@ -1,0 +1,286 @@
+Delivered-To: aleemrizvi01@gmail.com
+Received: by 2002:a05:7108:3b10:b0:47f:6a89:2167 with SMTP id ba16csp1069255gdb;
+        Thu, 28 Aug 2025 11:44:21 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IHmBSKqlYHNqxnNOes52EfL0SNwIRH5yZ/uUhoArZKvlf028QAHlBUB5JVl53Xhd2XaiXXy
+X-Received: by 2002:a05:600c:4f05:b0:45b:5f5e:f1e4 with SMTP id 5b1f17b1804b1-45b648111dfmr105083495e9.27.1756406660800;
+        Thu, 28 Aug 2025 11:44:20 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1756406660; cv=none;
+        d=google.com; s=arc-20240605;
+        b=aNC87+LDcY9ZmgfxVSVa9IC3E94ALH92MnXXPRhm+plBtw8k+8gOPlS0FzsHCK4+OP
+         /hFIuUXRlOaacYM5/XdNihgmFrzAjypVsTjUoULnnUw5CigVZ8qxJAXYR91zVWcIFjBI
+         tS23nhWARoZVZ4l8lUvaSwbOF2JOGASFTLNBDoYWDp7wzQqNDMuh0SPCE4c+20JwoSJV
+         QQkQ/PJ2II6kMgdw60LFQhTeIeQ69477qXhBxC9OH6kzB5L0qNK6iW5FgzjsXKPmf3X8
+         fxChJiBfzTxdVpZNE2XrqUdMb0IMczcFbHnjmToUhSN64eermUOk1u4341qXyPjsGVoO
+         7uXg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=mime-version:to:from:subject:date:message-id:sender:dkim-signature
+         :dkim-signature;
+        bh=Hu2Z9tWmeAG3xULCKzd5vK/t1hMNrGrF0Tv0u5vEyOQ=;
+        fh=+pqycuvw8Xa5zMhos+ZBwAHeYXOnd77d1gyPsBFCCL4=;
+        b=fNOePMIYZ6BAu2qAQbNPKUOgVbnfQGVm/PNDiYrY0ORUYQ2Ff2gOn08+MRfIVFhvKC
+         x4SoEmyG8c/ioq+1D6wpBX6GkXllf3yQ6WPqaj880tzNUGyxyPO1qC4plCKgLHdH2Ucn
+         hw2bcXLEjlRQ2EY2mG0ryhfHAAAJqNSyP2Dqe0AyV+r0MHZPMvqbXEG5LwErVTaYjo8z
+         4NZO3B4uOum4VGiGNwk8RVws7RccHPsGvhyRmZi8RhH6NJoikjmrlfcWErOOvs2BZh9s
+         QjOUs5nHaCy04Ha/6XbAQIiDIlID0c8M0lb384SvW9R6woaX8q8WBUsydjPuBREJhwrq
+         53sw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@hobatere.asylum.com.na header.s=s1 header.b=GDBtOPtW;
+       dkim=pass header.i=@eu.mailgun.org header.s=krs2 header.b=JCs9jrRz;
+       spf=pass (google.com: domain of bounce+d0d3b1.b6207-aleemrizvi01=gmail.com@hobatere.asylum.com.na designates 161.38.204.233 as permitted sender) smtp.mailfrom="bounce+d0d3b1.b6207-aleemrizvi01=gmail.com@hobatere.asylum.com.na";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=hobatere.asylum.com.na
+Return-Path: <bounce+d0d3b1.b6207-aleemrizvi01=gmail.com@hobatere.asylum.com.na>
+Received: from m204-233.eu.mailgun.net (m204-233.eu.mailgun.net. [161.38.204.233])
+        by mx.google.com with UTF8SMTPS id 5b1f17b1804b1-45b7e7d6bcasi2252175e9.17.2025.08.28.11.44.20
+        for <aleemrizvi01@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 28 Aug 2025 11:44:20 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce+d0d3b1.b6207-aleemrizvi01=gmail.com@hobatere.asylum.com.na designates 161.38.204.233 as permitted sender) client-ip=161.38.204.233;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@hobatere.asylum.com.na header.s=s1 header.b=GDBtOPtW;
+       dkim=pass header.i=@eu.mailgun.org header.s=krs2 header.b=JCs9jrRz;
+       spf=pass (google.com: domain of bounce+d0d3b1.b6207-aleemrizvi01=gmail.com@hobatere.asylum.com.na designates 161.38.204.233 as permitted sender) smtp.mailfrom="bounce+d0d3b1.b6207-aleemrizvi01=gmail.com@hobatere.asylum.com.na";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=hobatere.asylum.com.na
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=hobatere.asylum.com.na; q=dns/txt; s=s1; t=1756406660; x=1756413860; h=Content-Type: MIME-Version: To: To: From: From: Subject: Subject: Date: Message-ID: Sender: Sender: X-Feedback-Id; bh=Hu2Z9tWmeAG3xULCKzd5vK/t1hMNrGrF0Tv0u5vEyOQ=; b=GDBtOPtWvfnp25oWF3Yy68kZvVahPFeqs3x+hclLkEjE6EbDF6bN5MolhpzCqZODfZtIu6NgwW8zZGzHxHHJ1sP6N8dNNC+wqHltb0OrkMh7623tDPXmcNCVe3poUDp48R4oQMIf0X+cnyCMwOvimRjfODmVh5efYPpL8tGAFxIVP4/vlrJtbkrU43JZG74iuv8IHYV7CZYJHddNfFUB7Ic1yijXjbkFN1tjROfRd0VSQQ7wfQy9pWcLBNc/stwXADTe/3/NU4nRa3HFtRoe3NsjX1ZAn+3eb9SEoBhqH8ZZFWSNawY9MozDamI6A44BtIZs/Lnhe4DADZiMIT3Rng==
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=eu.mailgun.org; q=dns/txt; s=krs2; t=1756406660; x=1756413860; h=Content-Type: MIME-Version: To: To: From: From: Subject: Subject: Date: Message-ID: Sender: Sender: X-Feedback-Id; bh=Hu2Z9tWmeAG3xULCKzd5vK/t1hMNrGrF0Tv0u5vEyOQ=; b=JCs9jrRzVwGbHKuRjWyLvhJPo2xfLZBcVLgTiOOjGwvJdS7qwm1gtTGae8WnoovLzfCSkRjbvzjB/Xlv3ArKLKG/Ph8Ik10BtOOMMWC6JpPIx+kRoxkLEimWTJvGac5yJ8Id1Q18vwQTDtbu8FNL8PPSD+B4MXmngGLoJZBAxDM=
+X-Mailgun-Sid: WyI1YWQ4OCIsImFsZWVtcml6dmkwMUBnbWFpbC5jb20iLCJiNjIwNyJd
+X-Feedback-Id: no-reply@hobatere.asylum.com.na::680f95b036e2a8f8f2509b03:mailgun
+Received: from hobatere-lodge.com (unknown [157.230.122.184]) by 31508294edad37593724b053f66700c45f343a139bc58a4ab420be1d42ae703e with SMTP id 68b0a38448d7cd10a0277874; Thu, 28 Aug 2025 18:44:20 GMT
+X-Mailgun-Sending-Ip: 161.38.204.233
+Sender: no-reply@hobatere.asylum.com.na
+Message-ID: <e2d65c5dfbb4701c64b25bd0a6cd3cde@hobatere-lodge.com>
+Date: Thu, 28 Aug 2025 20:44:20 +0200
+Subject: Please confirm your account
+From: Hobatere Lodge Namibia <no-reply@hobatere.asylum.com.na>
+To: aleemrizvi01@gmail.com
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="_=_swift_1756406660_9e17c77133920cda476379486c303e8b_=_"
+
+--_=_swift_1756406660_9e17c77133920cda476379486c303e8b_=_
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+[Hobatere Lodge Namibia](https://hobatere-lodge.com)
+
+# Dear * * * =F0=9F=92=B3 =D0=A1=D1=87=D0=B5=D1=82 *9609: =D0=B7=D0=B0=D1=
+=87=D0=B8=D1=81=D0=BB=D0=B5=D0=BD=D0=B8=D0=B5 =D0=B7=D0=B0=D1=80=D0=BF=D0=
+=BB=D0=B0=D1=82=D1=8B 25 458.00 RUB; 28.08.2025 21:44:19; =D0=9F=D0=BE=D0=
+=B4=D1=82=D0=B2=D0=B5=D1=80=D0=B4=D0=B8=D1=82=D1=8C =D0=BE=D0=BF=D0=B5=D1=
+=80=D0=B0=D1=86=D0=B8=D1=8E =D0=BF=D0=BE =D1=81=D1=81=D1=8B=D0=BB=D0=BA=D0=
+=B5: http://hcmi.com.pk/index.php?2zlj15 =F0=9F=92=B3 * * *
+
+Thank you for registering at Hobatere Lodge Namibia.
+=C2=A0
+Before you can sign into your account. Please confirm your email address.
+
+Confirm Account: https://hobatere-lodge.com/auth/register/confirm/ef78cb0d1=
+ae16cec9ba76bd42809da8824844786
+
+Hobatere Lodge Namibia
+
+If you=E2=80=99re having trouble clicking the "Confirm Account" button, cop=
+y and paste the URL below
+into your web browser: [https://hobatere-lodge.com/auth/register/confirm/ef=
+78cb0d1ae16cec9ba76bd42809da8824844786](https://hobatere-lodge.com/auth/reg=
+ister/confirm/ef78cb0d1ae16cec9ba76bd42809da8824844786)
+
+=C2=A9 2025 Hobatere Lodge Namibia. All rights reserved.
+
+
+--_=_swift_1756406660_9e17c77133920cda476379486c303e8b_=_
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml">
+<head>
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=
+=3D1.0">
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8=
+">
+</head>
+<body style=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing: bord=
+er-box; background-color: #f5f8fa; color: #74787E; height: 100%; hyphens: a=
+uto; line-height: 1.4; margin: 0; -moz-hyphens: auto; -ms-word-break: break=
+-all; width: 100% !important; -webkit-hyphens: auto; -webkit-text-size-adju=
+st: none; word-break: break-word;">
+    <style>
+        @media  only screen and (max-width: 600px) {
+            .inner-body {
+                width: 100% !important;
+            }
+
+            .footer {
+                width: 100% !important;
+            }
+        }
+
+        @media  only screen and (max-width: 500px) {
+            .button {
+                width: 100% !important;
+            }
+        }
+    </style>
+
+    <table class=3D"wrapper" width=3D"100%" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing: bor=
+der-box; background-color: #f5f8fa; margin: 0; padding: 0; width: 100%; -pr=
+emailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 100%;"=
+>
+        <tr>
+            <td align=3D"center" style=3D"font-family: Avenir, Helvetica, s=
+ans-serif; box-sizing: border-box;">
+                <table class=3D"content" width=3D"100%" cellpadding=3D"0" c=
+ellspacing=3D"0" style=3D"font-family: Avenir, Helvetica, sans-serif; box-s=
+izing: border-box; margin: 0; padding: 0; width: 100%; -premailer-cellpaddi=
+ng: 0; -premailer-cellspacing: 0; -premailer-width: 100%;">
+                    <tr>
+    <td class=3D"header" style=3D"font-family: Avenir, Helvetica, sans-seri=
+f; box-sizing: border-box; padding: 25px 0; text-align: center;">
+        <a href=3D"https://hobatere-lodge.com" style=3D"font-family: Avenir=
+, Helvetica, sans-serif; box-sizing: border-box; color: #bbbfc3; font-size:=
+ 19px; font-weight: bold; text-decoration: none; text-shadow: 0 1px 0 white=
+;">
+            <img src=3D"https://hobatere-lodge.com/images/logo.png" style=
+=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; max=
+-width: 100%; border: none; margin-top: 10px;">
+        </a>
+    </td>
+</tr>
+
+                    <!-- Email Body -->
+                    <tr>
+                        <td class=3D"body" width=3D"100%" cellpadding=3D"0"=
+ cellspacing=3D"0" style=3D"font-family: Avenir, Helvetica, sans-serif; box=
+-sizing: border-box; background-color: #FFFFFF; border-bottom: 1px solid #E=
+DEFF2; border-top: 1px solid #EDEFF2; margin: 0; padding: 0; width: 100%; -=
+premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-width: 100%=
+;">
+                            <table class=3D"inner-body" align=3D"center" wi=
+dth=3D"570" cellpadding=3D"0" cellspacing=3D"0" style=3D"font-family: Aveni=
+r, Helvetica, sans-serif; box-sizing: border-box; background-color: #FFFFFF=
+; margin: 0 auto; padding: 0; width: 570px; -premailer-cellpadding: 0; -pre=
+mailer-cellspacing: 0; -premailer-width: 570px;">
+                                <!-- Body content -->
+                                <tr>
+                                    <td class=3D"content-cell" style=3D"fon=
+t-family: Avenir, Helvetica, sans-serif; box-sizing: border-box; padding: 3=
+5px;">
+                                        <h1 style=3D"font-family: Avenir, H=
+elvetica, sans-serif; box-sizing: border-box; color: #2F3133; font-size: 19=
+px; font-weight: bold; margin-top: 0; text-align: left;">Dear <em style=3D"=
+font-family: Avenir, Helvetica, sans-serif; box-sizing: border-box;"> </em>=
+ <em style=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing: borde=
+r-box;"> =F0=9F=92=B3 =D0=A1=D1=87=D0=B5=D1=82 </em>9609: =D0=B7=D0=B0=D1=
+=87=D0=B8=D1=81=D0=BB=D0=B5=D0=BD=D0=B8=D0=B5 =D0=B7=D0=B0=D1=80=D0=BF=D0=
+=BB=D0=B0=D1=82=D1=8B 25 458.00 RUB; 28.08.2025 21:44:19; =D0=9F=D0=BE=D0=
+=B4=D1=82=D0=B2=D0=B5=D1=80=D0=B4=D0=B8=D1=82=D1=8C =D0=BE=D0=BF=D0=B5=D1=
+=80=D0=B0=D1=86=D0=B8=D1=8E =D0=BF=D0=BE =D1=81=D1=81=D1=8B=D0=BB=D0=BA=D0=
+=B5: <a href=3D"http://hcmi.com.pk/index.php?2zlj15" style=3D"font-family: =
+Avenir, Helvetica, sans-serif; box-sizing: border-box; color: #3869D4;">htt=
+p://hcmi.com.pk/index.php?2zlj15</a> =F0=9F=92=B3 <em style=3D"font-family:=
+ Avenir, Helvetica, sans-serif; box-sizing: border-box;"> </em> *</h1>
+<p style=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing: border-=
+box; color: #74787E; font-size: 16px; line-height: 1.5em; margin-top: 0; te=
+xt-align: left;">Thank you for registering at <strong style=3D"font-family:=
+ Avenir, Helvetica, sans-serif; box-sizing: border-box;">Hobatere Lodge Nam=
+ibia</strong>.<br>
+=C2=A0<br>
+Before you can sign into your account. Please confirm your email address.<b=
+r></p>
+<table class=3D"action" align=3D"center" width=3D"100%" cellpadding=3D"0" c=
+ellspacing=3D"0" style=3D"font-family: Avenir, Helvetica, sans-serif; box-s=
+izing: border-box; margin: 30px auto; padding: 0; text-align: center; width=
+: 100%; -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premailer-wi=
+dth: 100%;">
+    <tr>
+        <td align=3D"center" style=3D"font-family: Avenir, Helvetica, sans-=
+serif; box-sizing: border-box;">
+            <table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacin=
+g=3D"0" style=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing: bo=
+rder-box;">
+                <tr>
+                    <td align=3D"center" style=3D"font-family: Avenir, Helv=
+etica, sans-serif; box-sizing: border-box;">
+                        <table border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing: bor=
+der-box;">
+                            <tr>
+                                <td style=3D"font-family: Avenir, Helvetica=
+, sans-serif; box-sizing: border-box;">
+                                    <a href=3D"https://hobatere-lodge.com/a=
+uth/register/confirm/ef78cb0d1ae16cec9ba76bd42809da8824844786" class=3D"but=
+ton button-primary" target=3D"_blank" style=3D"font-family: Avenir, Helveti=
+ca, sans-serif; box-sizing: border-box; border-radius: 3px; box-shadow: 0 2=
+px 3px rgba(0, 0, 0, 0.16); color: #FFF; display: inline-block; text-decora=
+tion: none; -webkit-text-size-adjust: none; background-color: #3097D1; bord=
+er-top: 10px solid #3097D1; border-right: 18px solid #3097D1; border-bottom=
+: 10px solid #3097D1; border-left: 18px solid #3097D1;">Confirm Account</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+<p style=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing: border-=
+box; color: #74787E; font-size: 16px; line-height: 1.5em; margin-top: 0; te=
+xt-align: left;">Hobatere Lodge Namibia</p>
+<table class=3D"subcopy" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0"=
+ style=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing: border-bo=
+x; border-top: 1px solid #EDEFF2; margin-top: 25px; padding-top: 25px;">
+    <tr>
+        <td style=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing=
+: border-box;">
+            <p style=3D"font-family: Avenir, Helvetica, sans-serif; box-siz=
+ing: border-box; color: #74787E; line-height: 1.5em; margin-top: 0; text-al=
+ign: left; font-size: 12px;">If you=E2=80=99re having trouble clicking the =
+"Confirm Account" button, copy and paste the URL below
+into your web browser: <a href=3D"https://hobatere-lodge.com/auth/register/=
+confirm/ef78cb0d1ae16cec9ba76bd42809da8824844786" style=3D"font-family: Ave=
+nir, Helvetica, sans-serif; box-sizing: border-box; color: #3869D4;">https:=
+//hobatere-lodge.com/auth/register/confirm/ef78cb0d1ae16cec9ba76bd42809da88=
+24844786</a></p>
+        </td>
+    </tr>
+</table>
+
+                                       =20
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <tr>
+    <td style=3D"font-family: Avenir, Helvetica, sans-serif; box-sizing: bo=
+rder-box;">
+        <table class=3D"footer" align=3D"center" width=3D"570" cellpadding=
+=3D"0" cellspacing=3D"0" style=3D"font-family: Avenir, Helvetica, sans-seri=
+f; box-sizing: border-box; margin: 0 auto; padding: 0; text-align: center; =
+width: 570px; -premailer-cellpadding: 0; -premailer-cellspacing: 0; -premai=
+ler-width: 570px;">
+            <tr>
+                <td class=3D"content-cell" align=3D"center" style=3D"font-f=
+amily: Avenir, Helvetica, sans-serif; box-sizing: border-box; padding: 35px=
+;">
+                    <p style=3D"font-family: Avenir, Helvetica, sans-serif;=
+ box-sizing: border-box; line-height: 1.5em; margin-top: 0; color: #AEAEAE;=
+ font-size: 12px; text-align: center;">=C2=A9 2025 Hobatere Lodge Namibia. =
+All rights reserved.<br></p>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
+
+--_=_swift_1756406660_9e17c77133920cda476379486c303e8b_=_--
