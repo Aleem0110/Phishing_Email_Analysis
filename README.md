@@ -1,4 +1,4 @@
-# 🕵️‍♂️ Phishing Email Header Analysis — Hobatere Lodge Namibia
+# 🕵️‍♂️ Phishing Email Investigation & Header Analysis
 
 This project documents the forensic analysis of a suspicious email marked as spam, allegedly from "Hobatere Lodge Namibia". The investigation includes header authentication, relay tracing, and phishing indicators.
 
